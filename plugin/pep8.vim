@@ -13,7 +13,7 @@ function! <SID>Pep8()
   let &grepformat = '%f:%l:%m'
   let &grepprg = 'pep8 --repeat'
   if &readonly == 0 | update | endif
-  silent! grep! %
+  silent! grep! "%"
   let &grepformat = l:grepformat_save
   let &grepprg = l:grepprogram_save
   let l:mod_total = 0
